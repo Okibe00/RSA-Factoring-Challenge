@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+''' doc'''
+import sys
+from math import sqrt
+f = open(sys.argv[1], "r")
+for x in f:
+    num = int(x)
+    sq = int(sqrt(num))
+    for i in range(2, (sq)):
+        if num % i == 0:
+            print(f"{x} = {num / i} * {i}")
+            break
+f.close()
